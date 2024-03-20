@@ -4,38 +4,51 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<div lang="en-US">
-			Whereas recognition of the inherent dignity and of the equal and
-			inalienable rights of all members of the human family is the
-			foundation of freedom, justice and peace in the world, Whereas
-			disregard and contempt for human rights have resulted in barbarous
-			acts which have outraged the conscience of mankind, and the advent
-			of a world in which human beings shall enjoy freedom of speech and
-			belief and freedom from fear and want has been proclaimed as the
-			highest aspiration of the common people, Whereas it is essential, if
-			man is not to be compelled to have recourse, as a last resort, to
-			rebellion against tyranny and oppression, that human rights should
-			be protected by the rule of law, Whereas it is essential to promote
-			the development of friendly relations between nations, Whereas the
-			peoples of the United Nations have in the Charter reaffirmed their
-			faith in fundamental human rights, in the dignity and worth of the
-			human person and in the equal rights of men and women and have
-			determined to promote social progress and better standards of life
-			in larger freedom,
-		</div>
-		<div lang="zh-Hans">
-			鉴于对人类家庭所有成员的固有尊严及其平等的和不移的权利的承认,乃是世界自由、正义与和平的基础,
-			鉴于对人权的无视和侮蔑已发展为野蛮暴行,这些暴行玷污了人类的良心,而一个人人享有言论和信仰自由并免予恐惧和匮乏的世界的来临,已被宣布为普通人民的最高愿望,
-			鉴于为使人类不致迫不得已铤而走险对暴政和压迫进行反叛,有必要使人权受法治的保护,
-			鉴于有必要促进各国间友好关系的发展,
-			鉴于各联合国国家的人民已在联合国宪章中重申他们对基本人权、人格尊严和价值以及男女平等权利的信念,并决心促成较大自由中的社会进步和生活水平的改善,
-			鉴于各会员国业已誓愿同联合国合作以促进对人权和基本自由的普遍尊重和遵行,
-			鉴于对这些权利和自由的普遍了解对于这个誓愿的充分实现具有很大的重要性,
-			因此现在,大会,发布这一世界人权宣言,作为所有人民和所有国家努力实现的共同标准,以期每一个人和社会机构经常铭念本宣言,努力通过教诲和教育促进对权利和自由的尊重,并通过国家的和国际的渐进措施,使这些权利和自由在各会员国本身人民及在其管辖下领土的人民中得到普遍和有效的承认和遵行;
-		</div>
-	</main>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+TC&family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-10..0,25..151,100..1000&display=swap"
+		rel="stylesheet"
+	/>
 
+	<header>
+		<h1 class="exhibition-title">and the word was God (神)</h1>
+		<p>
+			‘And the word was God (神)’ examines the relationship between
+			Chinese and English languages in Australia. A collaboration between
+			three first-generation Chinese Australians working in video art,
+			poetry and typography design, each artist draws upon their lived
+			experience to explore how the languages they speak are used,
+			exchanged and transformed across time. Through the sympathy between
+			three modalities of practice, this exhibition discovers dynamic
+			connections between the past, present and future of language
+			exchange in Australia.
+		</p>
+
+		<p class="CJK">
+			And the word was God (神) is an immersive exploration of language
+			and its appearances in a world where diverse cultures have the
+			opportunity to thrive side by side with each other. It invites
+			audiences to reflect upon their own experiences with language in
+			order to foster dialogue and understanding on the path to a future
+			of multicultural flourishing.
+		</p>
+
+		<p>
+			and the word was God (神) 考察了澳大利亞漢語和英語之間的關繫。
+			這是三位從事視頻藝術、詩歌和版式設計的第一代澳大利亞華人之間的合作，每位藝術家都利用自己的生活經驗來探索他們所説的語言如何隨着時間的推移而使用、交流和轉變。
+			通過三種實踐方式之間的共鳴，本次展覽髮現了澳大利亞語言交流的過去、現在和未來之間的動態聯繫。
+		</p>
+
+		<p>
+			and the word was God (神)
+			是對語言及其在多元文化有機會共同繁榮的世界中的表現的身臨其境的探索。
+			它邀請觀衆反思自己的語言經曆，以促進對話和理解，邁向多元文化繁榮的未來。
+		</p>
+	</header>
+</Layout>
+
+<div class="nav-bar">
 	<nav>
 		<a href="#" class="nav-item">
 			<span lang="en-US">About</span>
@@ -50,9 +63,20 @@ import Card from "../components/Card.astro";
 			<span lang="zh-Hans">档案</span>
 		</a>
 	</nav>
-</Layout>
+</div>
 
 <style>
+	html {
+		font-family: "Noto Sans";
+		font-size: 20px;
+		font-weight: 300;
+		animation: html 2s infinite alternate;
+		max-width: 800px;
+		padding-inline: 1.5rem;
+		margin-inline: auto;
+		background-color: white;
+	}
+
 	main {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -74,10 +98,13 @@ import Card from "../components/Card.astro";
 	nav {
 		display: flex;
 		width: 80%;
-		gap: 1rem;
+		gap: 8rem;
 		margin: auto;
 		justify-content: center;
+		padding-inline: 1.5rem;
+		margin-inline: auto;
 	}
+
 	.nav-item {
 		display: grid;
 		text-decoration: none;
@@ -115,4 +142,40 @@ import Card from "../components/Card.astro";
 		opacity: 0.25;
 		filter: blur(0.1em);
 	}
+
+	.exhibition-title {
+		font-family: "Noto Sans";
+		font-weight: 200;
+		color: white;
+		position: fixed;
+		display: flex;
+		height: 200px;
+		margin-top: 230px;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: 3rem;
+		mix-blend-mode: difference;
+	}
+
+	.exhibition-title {
+		--shadow-color: grey;
+		text-shadow:
+			-1px 1px 0 var(--shadow-color),
+			-2px 2px 0 var(--shadow-color),
+			-3px 3px 0 var(--shadow-color),
+			-4px 4px 0 var(--shadow-color),
+			-5px 5px 0 var(--shadow-color),
+			-6px 6px 0 var(--shadow-color),
+			-7px 7px 0 var(--shadow-color),
+			-8px 8px 0 var(--shadow-color),
+			-9px 9px 0 var(--shadow-color),
+			-10px 10px 0 var(--shadow-color);
+	}
+
+	::selection {
+		color: white;
+		background: grey;
+	}
+	/* 2. Mix-blend-mod */
 </style>
