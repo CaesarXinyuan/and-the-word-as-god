@@ -25,7 +25,7 @@ import Card from "../components/Card.astro";
 			exchange in Australia.
 		</p>
 
-		<p class="CJK">
+		<p>
 			And the word was God (神) is an immersive exploration of language
 			and its appearances in a world where diverse cultures have the
 			opportunity to thrive side by side with each other. It invites
@@ -34,7 +34,7 @@ import Card from "../components/Card.astro";
 			of multicultural flourishing.
 		</p>
 
-		<p>
+		<p class="CJK">
 			and the word was God (神) 考察了澳大利亞漢語和英語之間的關繫。
 			這是三位從事視頻藝術、詩歌和版式設計的第一代澳大利亞華人之間的合作，每位藝術家都利用自己的生活經驗來探索他們所説的語言如何隨着時間的推移而使用、交流和轉變。
 			通過三種實踐方式之間的共鳴，本次展覽髮現了澳大利亞語言交流的過去、現在和未來之間的動態聯繫。
@@ -46,6 +46,24 @@ import Card from "../components/Card.astro";
 			它邀請觀衆反思自己的語言經曆，以促進對話和理解，邁向多元文化繁榮的未來。
 		</p>
 	</header>
+
+	<h2 class="h2-title">Artists 艺术家</h2>
+
+	<p>
+		Ming Liew is a lens-based artist and a PhD student at the Royal
+		Melbourne Institute of Technology. His practice draws upon his
+		Chinese-Australian bicultural identity, combining ethnography and visual
+		storytelling to examine the immigrant experience in contemporary
+		Australia. Accentuating the paradoxes between lived and prescribed
+		sociocultural realities, Ming uses his artworks to advocate for
+		understanding that transcends linguistic, cultural, and social barriers.
+	</p>
+
+	<p class="CJK">
+		Ming Liew 是一位基于镜头的艺术家，也是皇家墨尔本理工学院的博士生。
+		他的实践利用了他的中澳双文化身份，结合民族志和视觉叙事来审视当代澳大利亚的移民经历。
+		明用他的艺术作品强调了生活与规定的社会文化现实之间的悖论，倡导超越语言、文化和社会障碍的理解。
+	</p>
 </Layout>
 
 <div class="nav-bar">
@@ -77,6 +95,9 @@ import Card from "../components/Card.astro";
 		background-color: white;
 	}
 
+	body {
+		padding: 0 0 5rem 0;
+	}
 	main {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -96,6 +117,10 @@ import Card from "../components/Card.astro";
 	}
 
 	nav {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
 		display: flex;
 		width: 80%;
 		gap: 8rem;
@@ -111,6 +136,7 @@ import Card from "../components/Card.astro";
 		filter: contrast(4);
 		background: #fff;
 		color: #000;
+		mix-blend-mode: multiply;
 	}
 
 	.nav-item > * {
@@ -173,9 +199,38 @@ import Card from "../components/Card.astro";
 			-10px 10px 0 var(--shadow-color);
 	}
 
+	h2 {
+		font-family: "Noto Sans";
+		font-size: 20px;
+		animation: h2 2s infinite alternate;
+	}
+
+	@keyframes h2 {
+		0% {
+			font-weight: 100;
+			font-variation-settings: "slnt" -10;
+		}
+
+		100% {
+			font-weight: 1000;
+			font-variation-settings: "slnt" 0;
+		}
+	}
+
+	.h2-title {
+		filter: blur(3px); /* 设置初始模糊效果 */
+		transition: filter 0.5s ease; /* 添加过渡效果以平滑变化 */
+	}
+
+	.h2-title:hover {
+		filter: none; /* 在悬停时移除模糊效果 */
+	}
+
 	::selection {
 		color: white;
 		background: grey;
 	}
 	/* 2. Mix-blend-mod */
+
+	/* for tutorial link only */
 </style>
