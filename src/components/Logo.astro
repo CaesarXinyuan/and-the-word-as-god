@@ -1,4 +1,4 @@
-<a href="/index">
+<a href="/">
     <h1 class="exhibition-title">and the word was God (神)</h1>
 </a>
 
@@ -20,7 +20,13 @@
         font-size: 3.1rem;
         mix-blend-mode: difference;
         z-index: 999;
+        transition: opacity 0.5s ease, height 0.5s ease; /* 增加了 transition 属性，控制透明度和高度变化的速度 */font-weight 2s ease; /* 增加了 transition 属性，控制透明度和字体粗细变化的速度 */
+
     }
+
+    .exhibition-title.hide {
+  opacity: 0;
+}
 
     .exhibition-title {
         --shadow-color: grey;
@@ -36,4 +42,33 @@
             -9px 9px 0 var(--shadow-color),
             -10px 10px 0 var(--shadow-color);
     }
+
+    .exhibition-title:hover {
+    font-weight: 300; /* 悬停时字体加粗 */
+    color: black;
+}
 </style>
+
+
+
+<script>
+    var lastScrollTop = 0;
+    var threshold = 100; // 设置滚动阈值
+
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('.exhibition-title');
+        var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop && currentScroll > threshold) { // 下滑且超过阈值
+            header.style.top = "-50%";
+            header.style.transform = "translate(-30%, 50%)";
+            header.classList.add('hide');
+        } else { // 上滑或者在顶部
+            header.style.top = "40%";
+            header.style.transform = "translate(-50%, -50%)";
+            header.classList.remove('hide');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+</script>
