@@ -1,0 +1,298 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="ABOUT and the word as god">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+TC&family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-10..0,25..151,100..1000&display=swap"
+		rel="stylesheet"
+	/>
+
+	<header>
+		<h1 class="exhibition-title">ARTISTS</h1>
+
+		<h2 class="h2-title">Artists 艺术家</h2>
+		<br />
+		<h3 class="h3-title">Ming Liew 刘明</h3>
+		<p>
+			Ming Liew is a lens-based artist and a PhD student at the Royal
+			Melbourne Institute of Technology. His practice draws upon his
+			Chinese-Australian bicultural identity, combining ethnography and
+			visual storytelling to examine the immigrant experience in
+			contemporary Australia. Accentuating the paradoxes between lived and
+			prescribed sociocultural realities, Ming uses his artworks to
+			advocate for understanding that transcends linguistic, cultural, and
+			social barriers.
+		</p>
+
+		<p class="CJK">
+			Ming Liew 是一位基于镜头的艺术家，也是皇家墨尔本理工学院的博士生。
+			他的实践利用了他的中澳双文化身份，结合民族志和视觉叙事来审视当代澳大利亚的移民经历。
+			明用他的艺术作品强调了生活与规定的社会文化现实之间的悖论，倡导超越语言、文化和社会障碍的理解。
+		</p>
+		<br />
+		<h3 class="h3-title">Ben Yi-Yu Qin 秦奕宇</h3>
+		<p>
+			Ben Qin is a poet and the Projects Coordinator at the Museum of
+			Chinese Australian History. Observing a principle of the fundamental
+			entwinement between form and content in writing, he composes poetry
+			specifically to interact with unconventional media. His poetry
+			demonstrates how media are not without their own saturation of
+			meaning and how the use of new forms of media, from domestic
+			furniture to photographs, deepen our manners of understanding.
+			Through these unexpected appearances for poetry, Ben explores an
+			emerging Chinese Australian experience.
+		</p>
+
+		<p class="CJK">
+			秦奕宇本是一位诗人，也是澳大利亚华人历史博物馆的项目协调员。
+			他遵循写作中形式与内容基本交织的原则，专门为与非传统媒体互动而创作诗歌。
+			他的诗歌展示了媒体并非没有自身饱和的意义，以及从家用家具到照片等新媒体形式的使用如何加深我们的理解方式。
+			通过这些意想不到的诗歌出现，本探索了澳大利亚华人的新兴经历。
+		</p>
+
+		<br />
+		<h3 class="h3-title">Xinyuan (Caesar) Li 李鑫源</h3>
+		<p>
+			Xinyuan (Caesar) Li is an independent designer and a Studio
+			Assistant at RMIT University in the School of Design and Social
+			Context. His design practice involves using digital technologies to
+			augment Western design styles with traditional Chinese aesthetics,
+			in typography, type design and identity design. He speculates on the
+			co-existence of visual forms in the English and Chinese languages to
+			cultivate transcultural narratives in the realm of contemporary
+			design.
+		</p>
+		<p class="CJK">
+			李新元 (Caesar) Li
+			是一位独立设计师，也是工作室助理皇家墨尔本理工大学设计与社会背景学院。
+			他的设计实践涉及使用数字技术来增强西方设计具有中国传统审美的风格，在版式、字体设计上和身份设计。
+			他推测视觉形式的共存英语和汉语培养跨文化当代设计领域的叙事。
+		</p>
+
+		<div class="nav-bar">
+			<nav>
+				<a href="#" class="nav-item">
+					<span lang="en-US">About</span>
+					<span lang="zh-Hans">关于</span>
+				</a>
+				<a href="#" class="nav-item">
+					<span lang="en-US">Artists</span>
+					<span lang="zh-Hans">艺术家</span>
+				</a>
+				<a href="#" class="nav-item">
+					<span lang="en-US">Archive</span>
+					<span lang="zh-Hans">档案</span>
+				</a>
+			</nav>
+		</div>
+	</header>
+
+	<style>
+		html {
+			font-family: "Noto Sans";
+			font-size: 20px;
+			font-weight: 300;
+			animation: html 2s infinite alternate;
+			max-width: 800px;
+			padding-inline: 1.5rem;
+			margin-inline: auto;
+			background-color: white;
+		}
+
+		body {
+			padding: 0 0 5rem 0;
+		}
+		main {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 80%;
+			gap: 1rem;
+			margin: auto;
+			container-type: block-size;
+		}
+		main > div {
+			aspect-radio: 1;
+			width: 100%;
+			height: 50cqi;
+		}
+
+		[lang="zh-Hans"] {
+			writing-mode: vertical-lr;
+		}
+
+		nav {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			width: 80%;
+			gap: 8rem;
+			margin: auto;
+			justify-content: center;
+			padding-inline: 1.5rem;
+			margin-inline: auto;
+		}
+
+		.nav-item {
+			display: grid;
+			text-decoration: none;
+			filter: contrast(4);
+			background: #9c9c9c;
+			color: #000;
+			mix-blend-mode: multiply;
+		}
+
+		.nav-item > * {
+			grid-column-start: 1;
+			grid-row-start: 1;
+			justify-self: center;
+			align-self: center;
+			position: relative;
+			display: block;
+			transition: all 2s ease-in-out;
+		}
+
+		.nav-item > [lang="zh-Hans"] {
+		}
+
+		.nav-item > [lang="en-US"] {
+			opacity: 0.25;
+			filter: blur(0.1em);
+		}
+		.nav-item > [lang="zh-Hans"] {
+			opacity: 1;
+			filter: blur(0);
+		}
+		.nav-item:hover > [lang="en-US"] {
+			opacity: 1;
+			filter: blur(0);
+		}
+		.nav-item:hover > [lang="zh-Hans"] {
+			opacity: 0.25;
+			filter: blur(0.1em);
+		}
+
+		.exhibition-title {
+			font-family: "Noto Sans";
+			font-weight: 200;
+			color: white;
+			position: fixed;
+			display: flex;
+			height: 200px;
+			margin-top: 230px;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 3rem;
+			mix-blend-mode: difference;
+		}
+
+		.exhibition-title {
+			--shadow-color: grey;
+			text-shadow:
+				-1px 1px 0 var(--shadow-color),
+				-2px 2px 0 var(--shadow-color),
+				-3px 3px 0 var(--shadow-color),
+				-4px 4px 0 var(--shadow-color),
+				-5px 5px 0 var(--shadow-color),
+				-6px 6px 0 var(--shadow-color),
+				-7px 7px 0 var(--shadow-color),
+				-8px 8px 0 var(--shadow-color),
+				-9px 9px 0 var(--shadow-color),
+				-10px 10px 0 var(--shadow-color);
+		}
+
+		h2 {
+			font-family: "Noto Sans";
+			font-size: 1.2rem;
+			animation: h2 2s infinite alternate;
+		}
+
+		h3 {
+			font-family: "Noto Sans";
+			font-weight: 500;
+			font-size: 1rem;
+			line-height: 0.9%;
+		}
+
+		@keyframes h2 {
+			0% {
+				font-weight: 100;
+				font-variation-settings: "slnt" -10;
+			}
+
+			100% {
+				font-weight: 1000;
+				font-variation-settings: "slnt" 0;
+			}
+		}
+
+		.h2-title {
+			filter: blur(3px); /* 设置初始模糊效果 */
+			transition: filter 2s ease; /* 添加过渡效果以平滑变化 */
+		}
+
+		.h2-title:hover {
+			filter: none; /* 在悬停时移除模糊效果 */
+		}
+
+		.h3-title {
+			filter: blur(1.2px); /* 设置初始模糊效果 */
+			transition: filter 2s ease; /* 添加过渡效果以平滑变化 */
+		}
+
+		.h3-title:hover {
+			filter: none; /* 在悬停时移除模糊效果 */
+		}
+
+		*::selection {
+			color: white;
+			background: grey;
+		}
+
+		/* 2. Mix-blend-mod */
+
+		/* LOGO */
+		.exhibition-title {
+			font-family: "Noto Sans", sans-serif;
+			font-weight: 200;
+			color: white;
+			position: fixed;
+			top: 30%; /* 设置垂直居中 */
+			left: 50%; /* 设置水平居中 */
+			transform: translate(
+				-50%,
+				-50%
+			); /* 使用transform属性偏移元素的位置 */
+			min-width: 75%;
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 3.1rem;
+			mix-blend-mode: difference;
+			z-index: 999;
+		}
+
+		.exhibition-title {
+			--shadow-color: grey;
+			text-shadow:
+				-1px 1px 0 var(--shadow-color),
+				-2px 2px 0 var(--shadow-color),
+				-3px 3px 0 var(--shadow-color),
+				-4px 4px 0 var(--shadow-color),
+				-5px 5px 0 var(--shadow-color),
+				-6px 6px 0 var(--shadow-color),
+				-7px 7px 0 var(--shadow-color),
+				-8px 8px 0 var(--shadow-color),
+				-9px 9px 0 var(--shadow-color),
+				-10px 10px 0 var(--shadow-color);
+		}
+	</style>
+</Layout>
