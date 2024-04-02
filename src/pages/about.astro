@@ -1,6 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Nav from "../components/Nav.astro";
+import Logo from "../components/logo.astro";
+
+
 ---
 
 <Layout title="ABOUT and the word as god">
@@ -9,8 +13,8 @@ import Card from "../components/Card.astro";
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+TC&family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-10..0,25..151,100..1000&display=swap" rel="stylesheet">
 	
 
-	<h1 class="exhibition-title">and the word was God (神)</h1>
-
+	
+<Logo />
 	<p>
 		And the word was God (神) is an immersive exploration of
 		language and its appearances in a world where diverse cultures
@@ -86,6 +90,7 @@ import Card from "../components/Card.astro";
 
 
 </Layout>
+<Nav />
 
 		<style>
 			main {
@@ -189,40 +194,5 @@ html {
 		font-size: 1rem;
 		font-weight: 300;
 	}
-
-	.exhibition-title {
-		font-family: "Noto Sans", sans-serif;
-		font-weight: 200;
-		color: white;
-		position: fixed;
-		top: 40%; /* 设置垂直居中 */
-		left: 50%; /* 设置水平居中 */
-		transform: translate(-50%, -50%); /* 使用transform属性偏移元素的位置 */
-		min-width: 75%;
-		height: auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		font-size: 3.1rem;
-		mix-blend-mode: difference;
-		z-index: 999;
-	}
-
-	.exhibition-title {
-		--shadow-color: grey;
-		text-shadow:
-			-1px 1px 0 var(--shadow-color),
-			-2px 2px 0 var(--shadow-color),
-			-3px 3px 0 var(--shadow-color),
-			-4px 4px 0 var(--shadow-color),
-			-5px 5px 0 var(--shadow-color),
-			-6px 6px 0 var(--shadow-color),
-			-7px 7px 0 var(--shadow-color),
-			-8px 8px 0 var(--shadow-color),
-			-9px 9px 0 var(--shadow-color),
-			-10px 10px 0 var(--shadow-color);
-	}
-
 
 		</style>

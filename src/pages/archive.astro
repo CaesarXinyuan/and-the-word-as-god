@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Nav from "../components/Nav.astro";
+import Logo from "../components/logo.astro";
 ---
 
 <Layout title="ABOUT and the word as god">
@@ -12,7 +14,7 @@ import Card from "../components/Card.astro";
 	/>
 
 	<header>
-		<h1 class="exhibition-title">ARCHIVE</h1>
+		<Logo />
 		<p>
 			‘And the word was God (神)’ examines the relationship between
 			Chinese and English languages in Australia. A collaboration between
@@ -102,24 +104,8 @@ import Card from "../components/Card.astro";
 		他的设计实践涉及使用数字技术来增强西方设计具有中国传统审美的风格，在版式、字体设计上和身份设计。
 		他推测视觉形式的共存英语和汉语培养跨文化当代设计领域的叙事。
 	</p>
-
-	<div class="nav-bar">
-		<nav>
-			<a href="#" class="nav-item">
-				<span lang="en-US">About</span>
-				<span lang="zh-Hans">关于</span>
-			</a>
-			<a href="#" class="nav-item">
-				<span lang="en-US">Artists</span>
-				<span lang="zh-Hans">艺术家</span>
-			</a>
-			<a href="#" class="nav-item">
-				<span lang="en-US">Archive</span>
-				<span lang="zh-Hans">档案</span>
-			</a>
-		</nav>
-	</div>
 </Layout>
+<Nav />
 
 <style>
 	html {
@@ -205,36 +191,6 @@ import Card from "../components/Card.astro";
 	.nav-item:hover > [lang="zh-Hans"] {
 		opacity: 0.25;
 		filter: blur(0.1em);
-	}
-
-	.exhibition-title {
-		font-family: "Noto Sans";
-		font-weight: 200;
-		color: white;
-		position: fixed;
-		display: flex;
-		height: 200px;
-		margin-top: 230px;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		font-size: 3rem;
-		mix-blend-mode: difference;
-	}
-
-	.exhibition-title {
-		--shadow-color: grey;
-		text-shadow:
-			-1px 1px 0 var(--shadow-color),
-			-2px 2px 0 var(--shadow-color),
-			-3px 3px 0 var(--shadow-color),
-			-4px 4px 0 var(--shadow-color),
-			-5px 5px 0 var(--shadow-color),
-			-6px 6px 0 var(--shadow-color),
-			-7px 7px 0 var(--shadow-color),
-			-8px 8px 0 var(--shadow-color),
-			-9px 9px 0 var(--shadow-color),
-			-10px 10px 0 var(--shadow-color);
 	}
 
 	h2 {

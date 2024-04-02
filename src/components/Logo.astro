@@ -1,0 +1,39 @@
+<a href="/index">
+    <h1 class="exhibition-title">and the word was God (神)</h1>
+</a>
+
+<style>
+    .exhibition-title {
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 200;
+        color: white;
+        position: fixed;
+        top: 40%; /* 设置垂直居中 */
+        left: 50%; /* 设置水平居中 */
+        transform: translate(-50%, -50%); /* 使用transform属性偏移元素的位置 */
+        min-width: 75%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3.1rem;
+        mix-blend-mode: difference;
+        z-index: 999;
+    }
+
+    .exhibition-title {
+        --shadow-color: grey;
+        text-shadow:
+            -1px 1px 0 var(--shadow-color),
+            -2px 2px 0 var(--shadow-color),
+            -3px 3px 0 var(--shadow-color),
+            -4px 4px 0 var(--shadow-color),
+            -5px 5px 0 var(--shadow-color),
+            -6px 6px 0 var(--shadow-color),
+            -7px 7px 0 var(--shadow-color),
+            -8px 8px 0 var(--shadow-color),
+            -9px 9px 0 var(--shadow-color),
+            -10px 10px 0 var(--shadow-color);
+    }
+</style>
